@@ -1,0 +1,56 @@
+====================================================
+       ADM HACKER AUTOMATED VERIFICATION SUITE       
+====================================================
+
+>> Test Group 1: Public Settings & Security Sanitization
+  [PASS] GET /api/settings returns HTTP 200
+  [PASS] Settings contains site_name="ADM HACKER"
+  [PASS] Settings exposes telegram_url
+  [PASS] Settings strictly masks password_hash
+  [PASS] Settings strictly masks salt
+
+>> Test Group 2: Server-Side VPN Key Verification
+  [PASS] Active key ADM-CYBER-9921-X7 verifies successfully
+  [PASS] Active key returns assigned tunnel IP
+  [PASS] Expired key is rejected with status "Expired"
+  [PASS] Revoked key is rejected with status "Revoked"
+  [PASS] Nonexistent key is rejected with status "Invalid"
+
+>> Test Group 3: VPN Connection & WireGuard Generation
+  [PASS] POST /api/vpn/connect establishes session
+  [PASS] Session token is returned
+  [PASS] WireGuard INI configuration generated
+  [PASS] Session heartbeat succeeds and accounts bytes
+  [PASS] WireGuard .conf downloadable via HTTP
+  [PASS] POST /api/vpn/disconnect gracefully closes session
+  [PASS] Post-disconnect heartbeat triggers terminate action
+
+>> Test Group 4: Admin Authentication & Brute-Force Shield
+  [PASS] Invalid credentials rejected with 401
+  [PASS] Valid admin login succeeds with token
+  [PASS] Protected /api/admin/me returns authenticated admin
+
+>> Test Group 5: Admin Key Management CRUD
+  [PASS] Admin successfully creates custom key
+  [PASS] Admin deactivates key
+  [PASS] Public verification immediately rejects Inactive key
+  [PASS] Admin reactivates key
+  [PASS] Public verification immediately accepts reactivated key
+
+>> Test Group 6: Immediate Key Revocation while Session is Running
+  [PASS] Admin revokes key in real time
+  [PASS] Gateway immediately terminates active session when key is revoked
+  [PASS] Admin successfully deletes key
+
+>> Test Group 7: Website Content Management & Propagation
+  [PASS] Admin successfully updates CMS settings
+  [PASS] New hero subtitle instantly visible via public API
+  [PASS] New telegram channel instantly visible via public API
+
+>> Test Group 8: Telemetry Stats & Activity Logs
+  [PASS] Stats returns key counts and server health
+  [PASS] Activity logs table records all events with IP and timestamp
+
+====================================================
+TEST SUMMARY: 33 PASSED, 0 FAILED
+====================================================

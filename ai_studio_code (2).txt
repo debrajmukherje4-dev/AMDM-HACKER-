@@ -1,0 +1,19 @@
+/adm-hacker/
+├── data/
+│   └── adm_hacker.db         # Persistent SQLite database (WAL mode)
+├── public/
+│   ├── css/
+│   │   ├── style.css         # Futuristic cyber theme & animations
+│   │   └── admin.css         # Admin dashboard layout & components
+│   ├── js/
+│   │   ├── app.js            # Client application & SSE synchronizer
+│   │   ├── admin.js          # Admin console CRUD & metrics controller
+│   │   ├── cyber-canvas.js   # 5-mode cyber background animation engine
+│   │   ├── audio-synth.js    # Web Audio synthwave ambient audio engine
+│   │   └── qr-generator.js   # Pure JS SVG QR code generator
+│   ├── index.html            # Public ADM HACKER portal
+│   └── admin.html            # Secure Administrator Dashboard
+├── db.js                     # SQLite schema, crypto utilities, seed data
+├── server.js                 # HTTP, REST API, SSE & rate-limiting server
+├── test-suite.js             # 33-point integration test suite
+└── README.md                 # System manual & architecture documentation

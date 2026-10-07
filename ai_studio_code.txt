@@ -1,0 +1,23 @@
+Client Tier (Mobile / Desktop)
+ ├── User Portal (public/index.html)
+ │    ├── Cyber Canvas Animation (Matrix, Grid, Neural, Void)
+ │    ├── Web Audio Synthwave Engine & Audio Pill Controls
+ │    ├── Server-Side VPN Key Authentication Form
+ │    ├── Live Session HUD (Radar Orb, Duration, Throughput, IP)
+ │    ├── WireGuard Multi-Platform Provisioning (QR Code, .conf, Deep Link)
+ │    ├── About the Owner Card & PGP Fingerprint
+ │    └── Dynamic Social & Contact Channels (Instagram, WhatsApp, Phone, Telegram)
+ └── Admin Console (public/admin.html)
+      ├── Secure Scrypt Authentication & Brute-Force Protection
+      ├── Real-Time KPI Telemetry & Server Diagnostics
+      ├── Complete VPN Key Management (Create, Activate, Deactivate, Revoke, Delete)
+      ├── Live Active Tunnels Table & Force-Disconnect Controller
+      ├── Dynamic Website CMS & Live Broadcast Transmitter
+      └── System Audit Logs Trail
+
+Gateway & Backend Tier (server.js & db.js)
+ ├── Pure Node.js HTTP & SSE Engine (Zero external npm dependencies)
+ ├── Hardware-accelerated Node:SQLite (WAL mode, persistent storage)
+ ├── Cryptographic Engine (x25519 Curve25519 key generation, Scrypt hashing)
+ ├── In-memory Rate Limiting & Brute-force Shield
+ └── Server-Sent Events (SSE) `/api/events` Broadcast Pipeline
